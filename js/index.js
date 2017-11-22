@@ -17,6 +17,17 @@ $(document).ready(function() {
    		console.log(error);
   	});
   
+  //Smooth window Scroll
+    $("nav a").click(function(e) {
+        var id = $(this).attr('href'); //#home
+    	
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        }, 2000);
+
+        e.preventDefault();
+    
+});
 
   	function displayShoes(response) {
   		var releases = response.releases;
